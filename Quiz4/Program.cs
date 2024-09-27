@@ -28,7 +28,21 @@ class Program
         int[] my_ints = { 7, 8, 55, -1, 0, 9, 7 };
 
         int _maxVal = int.MinValue; //if you do not know first value
-        //int _maxVal = my_ints[0]; //if you know the first value
+        int _minVal = int.MaxValue; //if you do not know first value
+        foreach (var item in my_ints)
+        {
+            if (item > _maxVal)
+            {
+                _maxVal = item;
+            }
+            if (item < _minVal)
+            {
+                _minVal = item;
+            }
+        }
+        
+        /*
+        int _maxVal = my_ints[0]; //if you know the first value
         for (int i = 0; i < my_ints.Length; i++)
         {
             if (my_ints[i] > _maxVal)
@@ -36,7 +50,9 @@ class Program
                 _maxVal = my_ints[i];
             }
         }
+        */
         Console.WriteLine($"Largest int: {_maxVal}");
+        Console.WriteLine($"Largest int: {_minVal}");
         #endregion
 
         #region Question 3
@@ -72,29 +88,18 @@ class Program
         Console.WriteLine("\nQuestion 5");
         string myString = "3 30 50 Hello 65 80";
         string[] myStringArray = myString.Split(' ');
-
-        int?[] myIntArray = new int?[6];
-        List<int?> myIntList = new List<int?>();
+        int[] myIntArray = new int[6];
 
         int n = 0;
         foreach (var item in myStringArray)
         {
-            int temp;
-            if (int.TryParse(item, out temp))
+            if (int.TryParse(item, out myIntArray[n]))
             {
-                myIntList.Add(temp);
-
-                myIntArray[n] = temp;
                 n++;
             }
         }
 
         foreach (var item in myIntArray)
-        {
-            Console.Write($"{item,4}");
-        }
-
-        foreach (var item in myIntList)
         {
             Console.Write($"{item,4}");
         }
