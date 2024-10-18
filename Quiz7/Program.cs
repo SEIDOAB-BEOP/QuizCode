@@ -1,4 +1,20 @@
-﻿#region Question 2
+﻿#region Question 1
+System.Console.WriteLine("\nQuestion 1");
+
+var b1 = true;
+var i1 = 5;
+var d1 = 10.5M;
+
+var logic_expr1 = ((i1 > 3) || (d1 < 20.5M)) && b1;
+var math_expr1 = i1+3;
+var math_expr2 = i1++;
+var logic_expr2 = (i1++ > 6); 
+
+
+
+#endregion
+
+#region Question 2
 System.Console.WriteLine("\nQuestion 2");
 var book1 = new csBook();
 var another_book1 = new csBook();
@@ -21,6 +37,11 @@ Console.WriteLine(o.ICanFly);
 
 CanIFly(new Duck());
 CanIFly(new Ostrich());
+#endregion
+
+#region Question 7
+var imbook1 = new imBook() { Title = "The Adventures of Tom Sawyer", Author = "Mark Twain" };
+var imbook2 = imbook1.SetAuthor("Katarina").SetTitle("Alfons cyklar");
 #endregion
 
 #region Question 10
@@ -90,6 +111,28 @@ public class Ostrich : Bird
 {
     //public new bool ICanFly { get; } = false; //Question 5
     public override bool ICanFly { get; } = false; //Question 6
+}
+#endregion
+
+#region Question 7
+public class imBook
+{
+    string _title;
+    public string Title { get => _title; init => _title = value; }
+
+    public string Author { get; init; }
+
+    public imBook() { }
+    public imBook(imBook org)
+    {
+        Title = org.Title;
+        Author = org.Author;
+    }
+
+    #region immutability
+    public imBook SetAuthor(string author) => new imBook(this){ Author = author };
+    public imBook SetTitle(string title) => new imBook(this){ Title = title };
+    #endregion
 }
 #endregion
 
