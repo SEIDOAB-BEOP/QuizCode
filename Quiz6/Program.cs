@@ -1,7 +1,4 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
-
-#region Question 2
+﻿#region Question 2
 Console.WriteLine("\nQuestion 2");
 int a = 1;
 int[] array = { 1, 1 };
