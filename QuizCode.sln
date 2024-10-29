@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Quiz6", "Quiz6\Quiz6.csproj
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Quiz7", "Quiz7\Quiz7.csproj", "{C1E7BF1F-F127-403A-AAF9-38F4C4907B91}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Quiz8", "Quiz8\Quiz8.csproj", "{11CF7050-CF65-400F-9517-1982BC96FA31}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -48,5 +50,9 @@ Global
 		{C1E7BF1F-F127-403A-AAF9-38F4C4907B91}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C1E7BF1F-F127-403A-AAF9-38F4C4907B91}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C1E7BF1F-F127-403A-AAF9-38F4C4907B91}.Release|Any CPU.Build.0 = Release|Any CPU
+		{11CF7050-CF65-400F-9517-1982BC96FA31}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{11CF7050-CF65-400F-9517-1982BC96FA31}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{11CF7050-CF65-400F-9517-1982BC96FA31}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{11CF7050-CF65-400F-9517-1982BC96FA31}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
